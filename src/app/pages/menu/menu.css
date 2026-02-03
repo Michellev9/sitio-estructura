@@ -1,0 +1,94 @@
+.hero-menu {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #4f46e5;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #e0e7ff;
+}
+
+.information {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.info-block {
+  margin-bottom: 2.5rem;
+}
+
+.information h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.information p {
+  color: #35393f;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  color: #374151;
+}
+
+.features-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.menu-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.menu-card img {
+  width: 70px;
+  margin-bottom: 1rem;
+}
+
+.menu-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+}
+.menu-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #1e293b;
+}
+
+.menu-card p {
+  font-size: 1.05rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.menu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+}
+

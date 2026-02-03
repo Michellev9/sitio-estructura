@@ -1,0 +1,94 @@
+<section class="search-hero">
+  <div class="search-hero-content">
+    <h1>Búsqueda en el sitio</h1>
+    <p>
+      Localiza páginas, secciones y contenido específico de forma rápida,
+      utilizando palabras clave o filtros avanzados.
+    </p>
+  </div>
+</section>
+
+<section class="search-wrapper">
+  <div class="search-block">
+    <div class="search-header">
+      <h3>Búsqueda rápida</h3>
+      <p>Ideal para encontrar contenido usando palabras clave.</p>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Ejemplo: menú, breadcrumbs, mapa del sitio..."
+        [(ngModel)]="query"
+        (keyup.enter)="doSearch()"
+      />
+      <button class="btn-primary" (click)="doSearch()">Buscar</button>
+      <button class="btn-secondary" (click)="clear()">Limpiar</button>
+    </div>
+
+    <span class="search-tip">💡 Presiona Enter para buscar rápidamente</span>
+  </div>
+
+  <div class="search-block">
+    <div class="search-header">
+      <h3>Búsqueda avanzada</h3>
+      <p>Utiliza filtros para refinar los resultados.</p>
+    </div>
+
+    <div class="filters-grid">
+      <div class="filter">
+        <label>Tipo de contenido</label>
+        <select [(ngModel)]="filters.type" (change)="doSearch()">
+          <option value="todos">Todos</option>
+          <option value="pagina">Página</option>
+          <option value="seccion">Sección</option>
+        </select>
+      </div>
+
+      <div class="filter">
+        <label>Sección</label>
+        <select [(ngModel)]="filters.section" (change)="doSearch()">
+          <option value="todas">Todas</option>
+          <option *ngFor="let s of sections" [value]="s">
+            {{ s }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-block results-block">
+    <div class="search-header">
+      <h3>Resultados</h3>
+      <p>Contenido que coincide con tu búsqueda.</p>
+    </div>
+
+    <ng-container *ngIf="results$ | async as results">
+
+      <div *ngIf="results.length === 0" class="results-empty">
+        <div class="icon">🔎</div>
+        <h4>Sin resultados</h4>
+        <p>
+          No se encontró contenido con los criterios actuales.
+          Intenta usar otras palabras o filtros.
+        </p>
+      </div>
+
+      <div *ngIf="results.length > 0" class="results-list">
+        <a
+          *ngFor="let item of results"
+          class="result-card"
+          [routerLink]="item.path"
+        >
+          <div class="result-info">
+            <h4>{{ item.title }}</h4>
+            <p>{{ item.description }}</p>
+          </div>
+          <span class="result-tag">{{ item.section }}</span>
+        </a>
+      </div>
+
+    </ng-container>
+  </div>
+
+</section>

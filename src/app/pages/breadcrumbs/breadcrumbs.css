@@ -1,0 +1,87 @@
+.hero-breadcrumbs {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #4f46e5;
+  color: white;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #e0e7ff;
+}
+
+.information {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.info-block {
+  margin-bottom: 2.5rem;
+}
+
+.information h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.information p {
+  color: #35393f;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 4rem;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.info-card ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 1rem auto 0;
+  color: #35393f;
+}
+
+.info-card li {
+  margin-bottom: 0.4rem;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+}
+
+.info-card img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+
+.example-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #35393f;
+}
+
+.example-breadcrumbs a {
+  color: #2f80ed;
+  text-decoration: none;
+}

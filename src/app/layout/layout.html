@@ -1,0 +1,52 @@
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Sitio-Estructura</div>
+
+    <nav class="menu">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
+      <a routerLink="/elementos-sitio" routerLinkActive="active">Elementos</a>
+      <a routerLink="/menu" routerLinkActive="active">Menú</a>
+      <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa</a>
+      <a routerLink="/busqueda" routerLinkActive="active">Búsqueda</a>
+    </nav>
+
+    <form class="quick-search" (submit)="$event.preventDefault(); goSearch()">
+      <input
+        type="text"
+        placeholder="Buscar..."
+        [(ngModel)]="quickQuery"
+        name="quickQuery"
+      />
+      <button type="submit">Ir</button>
+    </form>
+
+  </div>
+</header>
+
+<main class="content">
+  <app-breadcrumb></app-breadcrumb>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <h3>Sitio-Estructura</h3>
+      <p>
+        Desarrollo Web Profesional
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Secciones</h4>
+      <a routerLink="/">Inicio</a>
+      <a routerLink="/breadcrumbs">Breadcrumbs</a>
+      <a routerLink="/elementos-sitio">Elementos</a>
+      <a routerLink="/menu">Menú de navegación</a>
+      <a routerLink="/mapa-sitio">Mapa del sitio</a>
+      <a routerLink="/busqueda">Búsqueda</a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,85 @@
+.hero-mapa {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #4f46e5;
+  color: white;
+}
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #e0e7ff;
+}
+
+.information {
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.info-block {
+  margin-bottom: 2.5rem;
+}
+
+.information h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.information p {
+  color: #35393f;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  color: #374151;
+}
+
+.features-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.sitemap-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.sitemap-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sitemap-card ul li {
+  margin-bottom: 0.6rem;
+}
+
+.sitemap-card a {
+  text-decoration: none;
+  color: #0ea5e9;
+}
+
+.sitemap-card a:hover {
+  text-decoration: underline;
+}
+
+
