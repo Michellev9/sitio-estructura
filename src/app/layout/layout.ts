@@ -13,12 +13,22 @@ import { FormsModule } from '@angular/forms';
 })
 export class Layout {
 
+  menuOpen = false;
+  
   quickQuery = '';
   constructor(private router: Router) {}
 
   goSearch(): void{
     const q = (this.quickQuery || '').trim();
     this.router.navigate(['/busqueda'], {queryParams: {q} }); 
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
 }

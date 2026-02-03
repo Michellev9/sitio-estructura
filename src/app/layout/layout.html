@@ -2,13 +2,16 @@
   <div class="topbar-inner">
     <div class="brand">Sitio-Estructura</div>
 
-    <nav class="menu">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-      <a routerLink="/breadcrumbs" routerLinkActive="active">Breadcrumbs</a>
-      <a routerLink="/elementos-sitio" routerLinkActive="active">Elementos</a>
-      <a routerLink="/menu" routerLinkActive="active">Menú</a>
-      <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa</a>
-      <a routerLink="/busqueda" routerLinkActive="active">Búsqueda</a>
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+
+
+    <nav class="menu" [class.open]="menuOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Inicio</a>
+      <a routerLink="/breadcrumbs" routerLinkActive="active" (click)="closeMenu()">Breadcrumbs</a>
+      <a routerLink="/elementos-sitio" routerLinkActive="active" (click)="closeMenu()">Elementos</a>
+      <a routerLink="/menu" routerLinkActive="active" (click)="closeMenu()">Menú</a>
+      <a routerLink="/mapa-sitio" routerLinkActive="active" (click)="closeMenu()">Mapa</a>
+      <a routerLink="/busqueda" routerLinkActive="active" (click)="closeMenu()">Búsqueda</a>
     </nav>
 
     <form class="quick-search" (submit)="$event.preventDefault(); goSearch()">
